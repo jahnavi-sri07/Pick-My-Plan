@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pick My Plan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Pricing Section -->
+    <section class="pricing-section">
+
+        <!-- Website Heading -->
+        <header class="heading">
+            <h1>PICK MY PLAN.</h1>
+            <p class="subtitle">Find the plan that's right for you.</p>
+            <p class="tagline">Simple plans. Clear pricing. Better choices.</p>
+        </header>
+
+        <!-- Billing Toggle -->
+        <div class="billing-toggle">
+            <button id="monthly" class="active" aria-pressed="true">
+                Monthly
+            </button>
+
+            <button id="yearly" aria-pressed="false">
+                Yearly
+            </button>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-container">
+
+            <!-- Beginner Plan -->
+            <article class="pricing-card beginner-card">
+
+                <h2>Beginner</h2>
+                <p class="plan-description">Perfect for getting started.</p>
+
+                <div class="price-container">
+                    <span class="currency">₹</span>
+                    <span class="price" data-monthly="299" data-yearly="2870">299</span>
+                    <span class="unit">per month</span>
+                </div>
+
+                <ul class="features">
+                    <li>5 Projects</li>
+                    <li>Basic Features</li>
+                    <li>1 User Account</li>
+                    <li>Email Support</li>
+                    <li>Basic Storage</li>
+                </ul>
+
+                <button class="choose-btn">Choose Beginner</button>
+
+            </article>
+
+            <!-- Pro Plan -->
+            <article class="pricing-card pro-card">
+
+                <span class="popular-badge">MOST POPULAR</span>
+
+                <h2>Pro</h2>
+                <p class="plan-description">For those who want more.</p>
+
+                <div class="price-container">
+                    <span class="currency">₹</span>
+                    <span class="price" data-monthly="599" data-yearly="5750">599</span>
+                    <span class="unit">per month</span>
+                </div>
+
+                <ul class="features">
+                    <li>Unlimited Projects</li>
+                    <li>Advanced Features</li>
+                    <li>5 User Accounts</li>
+                    <li>Priority Support</li>
+                    <li>50 GB Storage</li>
+                </ul>
+
+                <button class="choose-btn">Choose Pro</button>
+
+            </article>
+
+            <!-- Team Plan -->
+            <article class="pricing-card team-card">
+
+                <span class="value-badge">BEST VALUE</span>
+
+                <h2>Team</h2>
+                <p class="plan-description">Made for growing teams.</p>
+
+                <div class="price-container">
+                    <span class="currency">₹</span>
+                    <span class="price" data-monthly="999" data-yearly="9590">999</span>
+                    <span class="unit">per month</span>
+                </div>
+
+                <ul class="features">
+                    <li>Unlimited Projects</li>
+                    <li>All Premium Features</li>
+                    <li>Unlimited Users</li>
+                    <li>24/7 Support</li>
+                    <li>100 GB Storage</li>
+                </ul>
+
+                <button class="choose-btn">Choose Team</button>
+
+            </article>
+
+        </div>
+
+
+<!-- Plan Selection Popup -->
+<div class="popup-overlay" id="plan-popup" hidden>
+    <div class="popup-box">
+        <button class="close-btn" id="close-plan">&times;</button>
+
+        <h2>Confirm Your Plan</h2>
+        <h3 id="selected-plan">Beginner Plan</h3>
+
+        <p id="selected-price">₹299 per month</p>
+
+        <h4>What's Included</h4>
+        <ul id="selected-features"></ul>
+
+        <button id="view-terms" class="choose-btn">
+            View Terms and Conditions
+        </button>
+
+        <label class="terms-agreement">
+            <input type="checkbox" id="agree-terms">
+            I have read and agree to the Terms and Conditions.
+        </label>
+
+        <button id="continue-btn" class="choose-btn" disabled>
+            Continue
+        </button>
+    </div>
+</div>
+
+<!-- Terms and Conditions Popup -->
+<div class="popup-overlay" id="terms-popup" hidden>
+    <div class="popup-box">
+        <button class="close-btn" id="close-terms">&times;</button>
+
+        <h2>Terms and Conditions</h2>
+
+        <ol>
+            <li>Each plan includes the features listed on its pricing card.</li>
+            <li>All prices are displayed in Indian Rupees (₹).</li>
+            <li>The selected billing period determines the displayed price.</li>
+            <li>This is a demonstration website. No real payment is collected.</li>
+            <li>Please review your selected plan before confirming.</li>
+        </ol>
+
+        <button id="back-to-plan" class="choose-btn">
+            Back to Plan
+        </button>
+    </div>
+</div>
+
+<!-- Subscription Confirmation Popup -->
+<div class="popup-overlay" id="success-popup" hidden>
+    <div class="popup-box">
+        <h2>Subscription Confirmed!</h2>
+        <p id="confirmation-message"></p>
+        <p>Thank you for choosing Pick My Plan!</p>
+
+        <button id="finish-btn" class="choose-btn">
+            Done
+        </button>
+    </div>
+</div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Pick My Plan. All rights reserved.</p>
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
